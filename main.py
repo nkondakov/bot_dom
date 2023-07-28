@@ -9,7 +9,7 @@ from settings.settings import load_config
 
 
 async def main() -> None:
-    path_to_settings = Path.cwd() / ".env/dev"
+    path_to_settings = Path.cwd() / ".env/prod"
     config = load_config(path_to_settings)
     storage = MemoryStorage()
     bot = Bot(token=config.tg_bot.token, parse_mode="HTML")
